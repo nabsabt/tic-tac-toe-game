@@ -80,7 +80,7 @@ function App() {
       {/* Game Container Div */}
       <div className="game-container">
         {/* List of players */}
-        <em>Active player: {deriveActivePlayer(gameTurns)}</em>
+        <em>Active player: {playerNames[deriveActivePlayer(gameTurns)]}</em>
         <ol className=" d-flex align-items-center justify-content-center">
           <Player
             initialPlayerName="Player 1"
