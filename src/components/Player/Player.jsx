@@ -1,7 +1,12 @@
 import "./player.css";
 import { useState } from "react";
 
-export default function Player({ initialPlayerName, playerSymbol, isActive }) {
+export default function Player({
+  initialPlayerName,
+  playerSymbol,
+  isActive,
+  onSubmitPlayerName,
+}) {
   const [isEditing, setIsEditing] = useState(false);
   const [enteredPlayername, setPlayernameState] = useState(initialPlayerName);
 
@@ -43,6 +48,7 @@ export default function Player({ initialPlayerName, playerSymbol, isActive }) {
   function onEditPlayername() {
     if (isEditing) {
       setPlayernameState(enteredPlayername);
+      onSubmitPlayerName(playerSymbol, enteredPlayername);
       setIsEditing((prev) => !prev);
     } else {
       setIsEditing((prev) => !prev);
