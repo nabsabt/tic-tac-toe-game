@@ -1,0 +1,14 @@
+#root {
+
+
+}
+
+.game-container{
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  background-color:rgb(58, 55, 14);
+  color:wheat;
+  width: fit-content;
+
+}
